@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+    <button onclick="ascending()">ascending order</button>
+    <button onclick="descending()">descending order</button>
+    <p id="result"></p>   
+    <script>
+        var numbers = [40, 3, 19, 25, 20];
+        function functions(num) {
+            return num * 10
+        }
+        var news = numbers.map(functions);
+        document.getElementById("result").innerHTML = news;
+           function ascending() {
+                news.sort(function (a, b) { return (a - b) })
+                document.getElementById("result").innerHTML = news;
+            }
+            function descending() {
+                news.sort(function (a, b) { return (b - a) })
+                document.getElementById("result").innerHTML = news;
+            }
+    </script>
+</body>
+</html>
